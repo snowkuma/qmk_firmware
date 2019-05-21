@@ -86,7 +86,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |  CTRL  |  ALT   |  GUI   |        |        |        |        |        |        |  GUI   |  ALT   |  CTRL  |
  * |--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
  * |   a    |   r    |   s    |   t    |   d    |  caps  |        |   h    |   n    |   e    |   i    |   o    |
- * |        |        |        | Shift  |        |        |        |        | Shift  |        |        |        |
+ * |        |        |        |        |        |        |        |        |        |        |        |        |
  * |--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
  * |   z    |   x    |   c    |   v    |   b    |        |        |   k    |   m    |   ,    |   .    |   '    |
  * |--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
@@ -96,7 +96,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 [_COLEMAK] = LAYOUT_planck_grid(
     Q_CTL,   W_ALT,   F_GUI,   KC_P,    KC_G,    _______, _______, KC_J,    KC_L,    U_GUI,   Y_ALT,   SCL_CTL,
-    KC_A,    KC_R,    KC_S,    T_SFT,   KC_D,    KC_CAPS, _______, KC_H,    N_SFT,   KC_E,    KC_I,    KC_O,
+    KC_A,    KC_R,    KC_S,    KC_T,   KC_D,     KC_CAPS, _______, KC_H,    KC_N,   KC_E,    KC_I,    KC_O,
     KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    _______, _______, KC_K,    KC_M,    KC_COMM, KC_DOT,  KC_QUOT,	
     FUN_L,   ___x___, ___x___, ESC_NUM, BSP_SYM, KC_LSFT, TAB_ARR, SPC_NAV, ENT_THU, ___x___, ___x___, ___x___
 ),
