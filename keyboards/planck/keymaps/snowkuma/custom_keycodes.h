@@ -41,9 +41,9 @@
 #define ESC_NUM LT(_NUMBER, KC_ESC)
 #define BSP_SYM LT(_SYMBOL, KC_BSPC)
 #define TAB_ARR LT(_ARRANGE, KC_TAB)
-#define SPC_NAV LT(_NAV, KC_SPC)
-#define ENT_THU LT(_THUMB, KC_ENT)
+#define ENT_NAV LT(_NAV, KC_ENT)
 #define FUN_L MO(_FUNCTION)
+#define SPC_SFT LSFT_T(KC_SPC)
 
 // Modifier tap holds
 #define Q_CTL LCTL_T(KC_Q)
@@ -51,7 +51,7 @@
 #define F_GUI LGUI_T(KC_F)
 #define U_GUI LGUI_T(KC_U)
 #define Y_ALT LALT_T(KC_Y)
-#define SCL_CTL LGUI_T(KC_SCLN)
+#define SCL_CTL LCTL_T(KC_SCLN)
 
 // HOMEROW SHIFT
 #define T_SFT LSFT_T(KC_T)
