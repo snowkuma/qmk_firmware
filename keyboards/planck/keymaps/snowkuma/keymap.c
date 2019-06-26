@@ -62,7 +62,8 @@ enum planck_keycodes {
 
 // Tap Dance Declarations
 enum {
-  TD_RESET = 0
+  TD_RESET = 0,
+  TD_TILDHOME
 };
 
 // Tap Dance Definitions
@@ -74,8 +75,36 @@ void safe_reset(qk_tap_dance_state_t *state, void *user_data) {
     }
 };
 
+void tilde_home(qk_tap_dance_state_t *state, void *user_data) {
+    if (state->count > 2) {
+	register_code(KC_LSFT);
+        register_code(KC_GRV);
+    }
+    else {
+        register_code(KC_LSFT);
+        register_code(KC_GRV);
+	if (state->count > 1) {
+          unregister_code(KC_GRV);
+          unregister_code(KC_LSFT);
+          register_code(KC_SLSH);
+        }
+    }
+} 
+
+void tilde_reset(qk_tap_dance_state_t *state, void *user_data)
+{
+  if (state->count == 2) {
+    unregister_code(KC_SLSH);
+  } else {
+    unregister_code(KC_GRV);
+    unregister_code(KC_LSFT);
+  }
+}
+
+
 qk_tap_dance_action_t tap_dance_actions[] = {
-  [TD_RESET] = ACTION_TAP_DANCE_FN (safe_reset)
+  [TD_RESET] = ACTION_TAP_DANCE_FN (safe_reset),
+  [TD_TILDHOME] = ACTION_TAP_DANCE_FN_ADVANCED (NULL, tilde_home, tilde_reset)
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -286,14 +315,14 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case ITERM:
         if (record->event.pressed) {
             SEND_STRING(SS_LGUI(" "));
-            SEND_STRING("ITERM" SS_TAP(X_ENTER));
+            SEND_STRING("iterm" SS_TAP(X_ENTER));
         }
         return false;
         break;
     case TYPE_FU:
         if (record->event.pressed) {
             SEND_STRING(SS_LGUI(" "));
-            SEND_STRING("TYPE FU" SS_TAP(X_ENTER));
+            SEND_STRING("type fu" SS_TAP(X_ENTER));
         }
         return false;
         break;
