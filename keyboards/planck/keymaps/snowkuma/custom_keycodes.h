@@ -38,6 +38,7 @@
 // Special Layer keycodes
 #define ESC_NUM LT(_NUMBER, KC_ESC)
 #define BSP_REG LT(_REGEX, KC_BSPC)
+#define DEL_REG LT(_REGEX, KC_DEL)
 #define MIN_ARR LT(_ARRANGE, KC_MINS)
 #define TAB_SFT LSFT_T(KC_TAB)
 #define SPC_SYM LT(_SYMBOL, KC_SPC)
@@ -48,6 +49,7 @@
 #define T_SFT LSFT_T(KC_T)
 #define N_SFT RSFT_T(KC_N)
 #define A_SFT LSFT_T(S(KC_A))
+#define GT_SFT LSFT_T(KC_GT)
 
 // Special Characters
 #define GBP LALT(KC_3)
@@ -61,9 +63,10 @@
 #define Y_ALT LALT_T(KC_Y)
 #define SCL_CTL LCTL_T(KC_SCLN)
 
-#define GT_SFT LSFT_T(KC_GT)
+#define G_CTL LCTL_T(S(KC_G))
+#define F_ALT LALT_T(S(KC_F))
+#define E_GUI LGUI_T(S(KC_E))
 
-#define F_ALT LALT_T(KC_F)
-#define E_GUI LGUI_T(KC_E)
+// Unicode characters
 #define YEN 0x00A5
 #define YEN_CTL LCTL_T(UC(YEN))
