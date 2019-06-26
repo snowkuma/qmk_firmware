@@ -63,7 +63,7 @@ enum planck_keycodes {
 // Tap Dance Declarations
 enum {
   TD_RESET = 0,
-  TD_TILDHOME
+  TD_TILD
 };
 
 // Tap Dance Definitions
@@ -104,7 +104,7 @@ void tilde_reset(qk_tap_dance_state_t *state, void *user_data)
 
 qk_tap_dance_action_t tap_dance_actions[] = {
   [TD_RESET] = ACTION_TAP_DANCE_FN (safe_reset),
-  [TD_TILDHOME] = ACTION_TAP_DANCE_FN_ADVANCED (NULL, tilde_home, tilde_reset)
+  [TD_TILD] = ACTION_TAP_DANCE_FN_ADVANCED (NULL, tilde_home, tilde_reset)
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -149,7 +149,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 [_SYMBOL] = LAYOUT_planck_grid(
     KC_EXLM, KC_AT,   KC_LGUI, KC_AMPR, KC_PIPE,  _______, _______, _______, KC_HOME, KC_UP,   KC_END, KC_PGUP,
-    KC_TILD, KC_LT,   KC_PERC, GT_SFT,  KC_QUES,  _______, _______, _______, KC_LEFT, KC_DOWN, KC_RGHT, KC_PGDN,
+    TD(TD_TILD), KC_LT,   KC_PERC, GT_SFT,  KC_QUES,  _______, _______, _______, KC_LEFT, KC_DOWN, KC_RGHT, KC_PGDN,
     KC_GRV,  _______, GBP,     KC_EQL,  KC_PLUS,  _______, _______, _______, _______, _______, _______, _______,
     _______, _______, _______, KC_UNDS, DEL_REG,  KC_MINS, _______, ___f___, _______, _______, _______, _______
 ),
@@ -189,6 +189,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |        |        |        |  f()   |        |   -    |        |        |        |        |        |        |
  * |        |        |        | Number |        |        |        | Space  | Enter  |        |        |        |
  * `--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------'
+*
 */
 [_NUMBER] = LAYOUT_planck_grid(
     G_CTL,   F_ALT,   E_GUI,   S(KC_D), S(KC_G), _______, _______, KC_ASTR, KC_7,    KC_8,    KC_9,    KC_0,
