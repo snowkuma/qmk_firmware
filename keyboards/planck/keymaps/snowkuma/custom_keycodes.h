@@ -28,22 +28,30 @@
 
 // Shortcuts
 #define INPUT_L LCAG(KC_SPC)
-#define UNDO LGUI(KC_Z)
-#define CUT LGUI(KC_X)
-#define COPY LGUI(KC_C)
-#define PASTE LGUI(KC_V)
-
+#define TXT_PLS LGUI(KC_PLUS)
+#define TXT_MIN LGUI(KC_MINS)
+ 
 // Convenience Keycodes
 #define ___x___ KC_NO
 #define ___f___ KC_TRNS
 
 // Special Layer keycodes
 #define ESC_NUM LT(_NUMBER, KC_ESC)
-#define BSP_SYM LT(_SYMBOL, KC_BSPC)
-#define TAB_ARR LT(_ARRANGE, KC_TAB)
-#define ENT_NAV LT(_NAV, KC_ENT)
+#define BSP_REG LT(_REGEX, KC_BSPC)
+#define MIN_ARR LT(_ARRANGE, KC_MINS)
+#define TAB_SFT LSFT_T(KC_TAB)
+#define SPC_SYM LT(_SYMBOL, KC_SPC)
+#define ENT_THU LT(_THUMB, KC_ENT)
+
 #define FUN_L MO(_FUNCTION)
-#define SPC_SFT LSFT_T(KC_SPC)
+// HOMEROW SHIFT
+#define T_SFT LSFT_T(KC_T)
+#define N_SFT RSFT_T(KC_N)
+#define A_SFT LSFT_T(S(KC_A))
+
+// Special Characters
+#define GBP LALT(KC_3)
+#define EURO LALT(S(KC_2))
 
 // Modifier tap holds
 #define Q_CTL LCTL_T(KC_Q)
@@ -53,10 +61,9 @@
 #define Y_ALT LALT_T(KC_Y)
 #define SCL_CTL LCTL_T(KC_SCLN)
 
-// HOMEROW SHIFT
-#define T_SFT LSFT_T(KC_T)
-#define N_SFT RSFT_T(KC_N)
+#define GT_SFT LSFT_T(KC_GT)
 
-// Special Characters
-#define GBP LALT(KC_3)
-#define EURO LALT(S(KC_2))
+#define F_ALT LALT_T(KC_F)
+#define E_GUI LGUI_T(KC_E)
+#define YEN 0x00A5
+#define YEN_CTL LCTL_T(UC(YEN))
