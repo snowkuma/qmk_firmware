@@ -49,7 +49,7 @@
 #define T_SFT LSFT_T(KC_T)
 #define N_SFT RSFT_T(KC_N)
 #define A_SFT LSFT_T(S(KC_A))
-#define GT_SFT LSFT_T(KC_GT)
+#define GT_SFT LSFT_T(S(KC_GT))
 
 // Special Characters
 #define GBP LALT(KC_3)
