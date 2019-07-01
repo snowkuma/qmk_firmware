@@ -30,6 +30,8 @@
 #define INPUT_L LCAG(KC_SPC)
 #define TXT_PLS LGUI(KC_PLUS)
 #define TXT_MIN LGUI(KC_MINS)
+#define SC_CAPF LGUI(LSFT(KC_3))  // Capture the full screen to file
+#define SC_CAPP LGUI(LSFT(KC_4))  // Capture portion of screen to file
  
 // Convenience Keycodes
 #define ___x___ KC_NO
@@ -48,8 +50,6 @@
 // HOMEROW SHIFT
 #define T_SFT LSFT_T(KC_T)
 #define N_SFT RSFT_T(KC_N)
-#define A_SFT LSFT_T(S(KC_A))
-#define GT_SFT LSFT_T(S(KC_GT))
 
 // Special Characters
 #define GBP LALT(KC_3)
@@ -63,9 +63,13 @@
 #define Y_ALT LALT_T(KC_Y)
 #define SCL_CTL LCTL_T(KC_SCLN)
 
-#define G_CTL LCTL_T(S(KC_G))
-#define F_ALT LALT_T(S(KC_F))
-#define E_GUI LGUI_T(S(KC_E))
+// Homerow tap modifiers 
+// #define A_CTL LCTL_T(KC_A)
+// #define R_ALT LALT_T(KC_R)
+// #define S_GUI LGUI_T(KC_S)
+// #define E_GUI LGUI_T(KC_E)
+// #define I_ALT LALT_T(KC_I)
+// #define O_CTL LCTL_T(KC_O)
 
 // Unicode characters
 #define YEN 0x00A5
